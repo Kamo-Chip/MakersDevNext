@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+.services {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+ul div li {
+  list-style-position: inside !important;
+  list-style-type: "- " !important;
+}
+
+.sale {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
+  font-family: "Mabry";
+}
+.sale p {
+  font-size: 1.8rem;
+  margin: 0.5em 0;
+}
+
+.services small {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.percentage {
+  font-size: 3rem !important;
+}
+
+.price {
+  font-family: mabry;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.6em;
+  -webkit-text-decoration: #00cbba;
+  text-decoration: #00cbba;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.services-container, .packages-container {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.packages-container span {
+  height: 87px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.505);
+  border-radius: 20px;
+  margin: 0 1rem 3rem 1rem;
+  width: 80%;
+  min-width: 280px;
+  max-width: 520px;
+  justify-self: center;
+}
+.item p,
+.item li {
+  font-family: Inter, sans-serif;
+}
+.item button {
+  justify-self: center;
+}
+/* .item h2 {
+  line-height: 1em;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.item li {
+  padding-bottom: 1rem;
+  list-style: circle;
+}
+
+.disclaimer {
+  font-family: mabry !important;
+}
+
+@media screen and (min-width: 1440px) {
+  /* .packages-container h2 {
+    margin-top: 0;
+  } */
+  .packages-container .price {
+    margin: 0;
+  }
+  /* h2 {
+    font-size: 2.4rem;
+  } */
+}
+@media screen and (min-width: 2000px) {
+  .services-container,
+  .packages-container {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 3.25rem;
+    line-height: 3rem;
+  }
+
+  .item ul {
+    margin-top: 6rem;
+  }
+  .item p,
+  .item li {
+    line-height: 1.45em;
+  }
+  .sale div {
+    padding: 1em 1.5em;
+  }
+  .sale p {
+    font-size: 4rem;
+  }
+  .services small {
+    font-size: 2rem;
+  }
+  .percentage {
+    font-size: 5rem !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .item {
+    width: 50%;
+    margin-bottom: 6rem;
+  }
+  .services-container,
+  .packages-container {
+    padding: 0;
+    grid-gap: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .services-container,
+  .packages-container {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  /* .item h2 {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  } */
+  .packages-container span {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item {
+    margin-bottom: 5rem;
+    width: 70%;
+  }
+  .item ul {
+    padding-left: 1rem;
+  }
+  /* .item h2 {
+    margin-bottom: 0 !important;
+  } */
+}
+@media screen and (max-width: 425px) {
+  .services-container,
+  .packages-container {
+    padding: 0;
+    margin-bottom: 5rem;
+    grid-template-rows: auto auto;
+  }
+  .item {
+    width: 330px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    margin-top: 5rem;
+  }
+  .packages-container {
+    margin-bottom: 0;
+  }
+  .packages-container .item {
+    margin-top: 3rem;
+  }
+  .price {
+    font-size: 2rem;
+  }
+  .sale {
+    margin-bottom: 1rem;
+  }
+  .sale p {
+    font-size: 1.4rem;
+    margin: 0.5em 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .disclaimer {
+    margin-top: 2rem;
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .item {
+    width: 250px;
+  }
+} /*# sourceMappingURL=Services.css.map */

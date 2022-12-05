@@ -1,0 +1,23 @@
+.layoutMain {
+    padding: 0 5rem;
+    max-width: 2300px;
+}
+
+@media screen and (min-width: 2000px){
+    .layoutMain {
+        padding: 0;
+    }    
+}
+
+@media screen and (max-width: 700px){
+    .layoutMain {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .layoutMain {
+        padding: 0 1rem;
+    }
+}
+
