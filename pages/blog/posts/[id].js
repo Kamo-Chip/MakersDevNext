@@ -3,10 +3,12 @@ import { getAllPostIds, getPostData } from "../../../lib/posts";
 import Head from "next/head";
 import Date from "../../../components/date";
 import Link from "next/link";
-import backArrow from "../../../public/backArrow.svg";
+import { IoIosArrowBack } from "react-icons/io";
 import Image from "next/image";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import Alert from "../../../components/Alert";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -25,19 +27,77 @@ export async function getStaticPaths() {
   };
 }
 export default function Post({ postData }) {
+  const [location, setLocation] = useState("");
+
+  const copyTextToClipboard = async (text) => {
+    if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(text);
+    } else {
+      return document.execCommand("copy", true, text);
+    }
+  };
+
+  const handleCopyClick = (copyText) => {
+    copyTextToClipboard(copyText)
+      .then(() => {
+        document.querySelector(".alert").style.display = "flex";
+        setTimeout(() => {
+          document.querySelector(".alert").style.display = "none";
+        }, 2500);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    setLocation(window.location.href);
+  }, []);
+
   return (
     <Layout blog={true}>
       <Head>
         <title>{postData.title}</title>
+        <meta
+          name="description"
+          content={postData.description}
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content={postData.keywords}
+        />
+        <meta
+          property="og:description"
+          content={postData.preview}
+        />
+        <meta
+          property="og:image"
+          content={`/${postData.image}`}
+        />
+        <meta name="author" content="Kamogelo Khumalo" />
+        <meta name="theme-color" content="#ff802b" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Link href="/blog" className="blogLink">
-        <Image
-          src={backArrow}
-          alt="Back to main blog list"
-          width={32}
-          height={32}
-          className="blogBack"
-        />
+        <IoIosArrowBack className="blogBack" size="2.5rem" />
       </Link>
       <article className="blogPost">
         <div
@@ -62,7 +122,9 @@ export default function Post({ postData }) {
               <b>{postData.tag}</b>
             </span>
           </div>
-          <BsFillShareFill size="2rem"/>
+          <button onClick={() => handleCopyClick(location)}>
+            <BsFillShareFill size="2rem" />
+          </button>
         </div>
         <h1>{postData.title}</h1>
         <div>
@@ -118,6 +180,7 @@ export default function Post({ postData }) {
         />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <Alert />
     </Layout>
   );
 }

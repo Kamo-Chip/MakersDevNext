@@ -91,13 +91,44 @@ a {
   font-family: mabry !important;
 }
 
-.hero,
+.alert {
+  position: fixed;
+  background-color: #000;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  height: fit-content;
+  text-align: center;
+  padding: .5rem;
+  width: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 5rem;
+  font-family: mabry;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  display: none;
+  animation: fadeIn 500ms ease 0ms 1 forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .hero,
 .why,
 .faq,
 .pricing,
 .footer {
   overflow-x: hidden !important;
-}
+} */
 
 @media screen and (min-width: 2000px) {
   h1 {

@@ -5,6 +5,8 @@ tag: 'Rendering'
 image: 'gmb.png'
 imageAlt: 'Google business'
 preview: 'These are often confused. What is the difference?!'
+keywords: 'js, school, cows'
+description: 'lorem ipsum'
 ---
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.

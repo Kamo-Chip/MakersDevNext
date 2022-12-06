@@ -2,7 +2,7 @@ const Item = ({ serviceName, price, tagLine, perkList, furtherPerkList }) => {
   return (
     <div className="item" data-aos="fade-left" data-aos-easing="ease">
       <h3>{serviceName}</h3>
-      {serviceName === "Website design & development" ||
+      {serviceName === "Google Business Profile management" ||
       serviceName === "Starter" ||
       serviceName === "Google Business Pack" ? (
         <span
@@ -19,7 +19,7 @@ const Item = ({ serviceName, price, tagLine, perkList, furtherPerkList }) => {
           }}
         >
           <b>
-            {serviceName === "Website design & development"
+            {serviceName === "Google Business Profile management"
               ? "Most popular"
               : serviceName === "Starter"
               ? "Save R250"

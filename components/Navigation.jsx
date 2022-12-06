@@ -6,6 +6,7 @@ import LogoIcon from "../public/logo.png";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import Image from "next/image";
+import { IoIosArrowBack } from "react-icons/io";
 
 const Navigation = ({ blog }) => {
   const [showNavItems, setShowNavItems] = useState(false);
@@ -135,13 +136,9 @@ const Navigation = ({ blog }) => {
               MakersDev
             </Link>
           </header>
-          <div style={{position: "absolute", right: 0, marginRight: "2rem", fontSize: "1.2rem"}}>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-            </ul>
-          </div>
+          <Link href="/" className="blogLink">
+            <IoIosArrowBack className="blogBack" size="2.5rem"/>
+          </Link>
         </nav>
       )}
     </>
