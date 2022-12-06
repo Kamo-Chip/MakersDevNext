@@ -17,14 +17,14 @@ const Testimonials = () => {
         <Testimonial
           imgSrc="/obles.jpg"
           testimonialText="Throughout the whole project, MakersDev
-            supported us and exceeded our expectations. Our experience personal and friendly, and their ability to identify
+            supported us and exceeded our expectations. Our experience was personal and friendly, and their ability to identify
             and present our key messages in an imaginative and creative way gave
             us a huge amount of confidence in them."
           siteLink="https://www.oblesremoval.co.za"
           clientDetails="Lesley, Obles Removal"
         />
         <Testimonial
-          imgSrc="/matnomz.jpg"
+          imgSrc="/matnomz.JPG"
           testimonialText="MakersDev helped us set up our Google business profile and develop a
           website. They made the process extremely easy for us and always kept
           us up to date on the status of things. I would definitely recommend

@@ -9,6 +9,8 @@ import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import Alert from "../../../components/Alert";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -52,6 +54,7 @@ export default function Post({ postData }) {
 
   useEffect(() => {
     setLocation(window.location.href);
+    Aos.init({ duration: 3000 });
   }, []);
 
   return (
@@ -67,7 +70,7 @@ export default function Post({ postData }) {
       <Link href="/blog" className="blogLink">
         <IoIosArrowBack className="blogBack" size="2.5rem" />
       </Link>
-      <article className="blogPost">
+      <article className="blogPost" data-aos="fade-in" data-aos-easing="ease">
         <div
           style={{
             display: "flex",

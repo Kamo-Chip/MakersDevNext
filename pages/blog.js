@@ -4,6 +4,9 @@ import Image from "next/image";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,6 +18,9 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ allPostsData }) {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
     <Layout blog={true}>
       <Head>
@@ -30,11 +36,11 @@ export default function Blog({ allPostsData }) {
         />
         <meta
           property="og:description"
-          content="We establish your business online with ease. At an affordable price"
+          content="Your guide to your business's online success."
         />
         <meta
           property="og:image"
-          content="https://www.partoo.co/mybusiness/wp-content/uploads/2022/04/google-my-business-ficha.jpg"
+          content="/ducks.jpg"
         />
         <meta name="author" content="MakersDev" />
       </Head>
@@ -43,7 +49,7 @@ export default function Blog({ allPostsData }) {
         <ul className="blogList">
           {allPostsData.map(
             ({ id, date, title, tag, image, imageAlt, preview }) => (
-              <Link href={`/blog/posts/${id}`} key={id} className="blogItem">
+              <Link href={`/blog/posts/${id}`} key={id} className="blogItem" data-aos="fade-right" data-aos-easing="ease">
                 <li className="blogPreviewDetails">
                   <Image
                     priority
