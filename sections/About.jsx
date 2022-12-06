@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import duck from "../public/duck.jpg";
+// import duck from "../public/duck.jpg";
 import Image from "next/image";
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
     >
       <div className="img-container">
         <Image
-          src={duck}
+          src="/duck.jpg"
           alt="one orange duck surrounded by yellow ducks"
           height={479}
           width={359}

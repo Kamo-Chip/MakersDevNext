@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import HeroImg from "../public/hero.png";
+// import HeroImg from "../public/hero.png";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Aos from "aos";
 import Image from "next/image";
@@ -39,7 +39,7 @@ const Hero = () => {
             We establish your business online with ease. At an affordable price
           </small>
         </div>
-        <Image src={HeroImg} alt="Phone" width={2852} height={1757} />
+        <Image src="/hero.png" alt="Phone" width={2852} height={1757} />
       </div>
       <div
         style={{

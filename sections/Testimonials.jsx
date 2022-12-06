@@ -1,6 +1,6 @@
-import client1 from "../public/obles.jpg";
-import client2 from "../public/matnomz.jpg";
-import client3 from "../public/mthombeni.jpg";
+// import client1 from "../public/obles.jpg";
+// import client2 from "../public/matnomz.jpg";
+// import client3 from "../public/mthombeni.jpg";
 import Testimonial from "../components/Testimonial";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -15,7 +15,7 @@ const Testimonials = () => {
       <h1>What Clients Are Saying About Us</h1>
       <div className="testimonialsContainer">
         <Testimonial
-          imgSrc={client1}
+          imgSrc="/obles.jpg"
           testimonialText="Throughout the whole project, MakersDev
             supported us and exceeded our expectations. Our experience personal and friendly, and their ability to identify
             and present our key messages in an imaginative and creative way gave
@@ -24,7 +24,7 @@ const Testimonials = () => {
           clientDetails="Lesley, Obles Removal"
         />
         <Testimonial
-          imgSrc={client2}
+          imgSrc="/matnomz.jpg"
           testimonialText="MakersDev helped us set up our Google business profile and develop a
           website. They made the process extremely easy for us and always kept
           us up to date on the status of things. I would definitely recommend
@@ -34,7 +34,7 @@ const Testimonials = () => {
           clientDetails="Ohimane, Matnomz Frenchies"
         />
         <Testimonial
-          imgSrc={client3}
+          imgSrc="/mthombeni.jpg"
           testimonialText="In a competitive industry such as construction, we’re always looking for a way to get an edge. MakersDev has made it easy
           for us to get great results from our profile without having to do
           any of the work ourselves."

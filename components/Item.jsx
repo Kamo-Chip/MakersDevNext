@@ -27,7 +27,6 @@ const Item = ({ serviceName, price, tagLine, perkList, furtherPerkList }) => {
           </b>
         </span>
       ) : null}
-      {console.log(price)}
       <span
         className="price"
         dangerouslySetInnerHTML={{ __html: `R ${price}` }}
