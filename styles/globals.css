@@ -94,7 +94,7 @@ a {
 }
 
 .alert {
-  position: fixed;
+  position: absolute;
   background-color: #000;
   color: #fff;
   top: 0;
