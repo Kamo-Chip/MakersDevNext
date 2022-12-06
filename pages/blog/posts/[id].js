@@ -93,9 +93,11 @@ export default function Post({ postData }) {
               <b>{postData.tag}</b>
             </span>
           </div>
-          <button onClick={() => handleCopyClick(location)}>
-            <BsFillShareFill size="2rem" />
-          </button>
+          <BsFillShareFill
+            size="2rem"
+            onClick={() => handleCopyClick(location)}
+            className="shareBtn"
+          />
         </div>
         <h1>{postData.title}</h1>
         <div>

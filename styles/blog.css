@@ -71,7 +71,7 @@
   font-size: 1.2rem;
 }
 
-.blogPost button {
+/* .blogPost button {
   border:none;
   background: none;
   box-shadow: none;
@@ -82,6 +82,10 @@
   cursor:pointer;
   border-radius: none;
   transition: none;
+} */
+
+.shareBtn {
+  cursor: pointer;
 }
 
 .blogPost h1 {
