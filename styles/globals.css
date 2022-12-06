@@ -19,6 +19,7 @@
 @font-face {
   font-family: mabry;
   src: url("/fonts/Mabry-Pro-Medium.ttf");
+  font-display: swap;
 }
 * {
   box-sizing: border-box;

@@ -67,6 +67,7 @@ const Navigation = ({ blog }) => {
                   offset={0}
                   duration={500}
                   onClick={closeNav}
+                  href="#"
                 >
                   About
                 </ScrollLink>
@@ -79,6 +80,7 @@ const Navigation = ({ blog }) => {
                   offset={0}
                   duration={500}
                   onClick={closeNav}
+                  href="#"
                 >
                   Testimonials
                 </ScrollLink>
@@ -91,6 +93,7 @@ const Navigation = ({ blog }) => {
                   offset={0}
                   duration={500}
                   onClick={closeNav}
+                  href="#"
                 >
                   Services
                 </ScrollLink>
@@ -103,6 +106,7 @@ const Navigation = ({ blog }) => {
                   offset={0}
                   duration={500}
                   onClick={closeNav}
+                  href="#"
                 >
                   Contact
                 </ScrollLink>

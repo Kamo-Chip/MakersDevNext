@@ -58,23 +58,10 @@ export default function Post({ postData }) {
     <Layout blog={true}>
       <Head>
         <title>{postData.title}</title>
-        <meta
-          name="description"
-          content={postData.description}
-          key="desc"
-        />
-        <meta
-          name="keywords"
-          content={postData.keywords}
-        />
-        <meta
-          property="og:description"
-          content={postData.preview}
-        />
-        <meta
-          property="og:image"
-          content={`/${postData.image}`}
-        />
+        <meta name="description" content={postData.description} key="desc" />
+        <meta name="keywords" content={postData.keywords} />
+        <meta property="og:description" content={postData.preview} />
+        <meta property="og:image" content={`/${postData.image}`} />
         <meta name="author" content="Kamogelo Khumalo" />
       </Head>
       <Link href="/blog" className="blogLink">
@@ -119,6 +106,7 @@ export default function Post({ postData }) {
             }}
           >
             <Image
+              priority
               src="/Me.jpg"
               alt="Kamogelo Khumalo"
               width={60}
