@@ -112,7 +112,17 @@ const Navigation = ({ blog }) => {
                 </ScrollLink>
               </li>
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link
+                  href="/blog"
+                  style={{
+                    backgroundColor: "#00cbba",
+                    color: "#fff",
+                    padding: ".5rem",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Blog
+                </Link>
               </li>
             </ul>
 
@@ -141,7 +151,7 @@ const Navigation = ({ blog }) => {
             </Link>
           </header>
           <Link href="/" className="blogLink">
-            <IoIosArrowBack className="blogBack" size="2.5rem"/>
+            <IoIosArrowBack className="blogBack" size="2.5rem" />
           </Link>
         </nav>
       )}
