@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Layout, { name } from "../../components/layout";
+import Layout, { name } from "../components/layout";
 import Image from "next/image";
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../../components/date";
+import Date from "../components/date";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
