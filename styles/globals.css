@@ -12,12 +12,12 @@
 
 @font-face {
   font-family: grifter;
-  src: url("../fonts/grifterbold.otf");
+  src: url("/fonts/grifterbold.otf");
 }
 
 @font-face {
   font-family: mabry;
-  src: url("../fonts/Mabry-Pro-Medium.ttf");
+  src: url("/fonts/Mabry-Pro-Medium.ttf");
 }
 * {
   box-sizing: border-box;
