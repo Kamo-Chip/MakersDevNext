@@ -33,10 +33,10 @@ const About = () => {
             service within a short amount of time they lose interest and move on
             to a competitor that satisfies their needs. Now the question is how
             do you gain the
-            {"consumer's"} attention?
+            {" consumer's"} attention?
           </p>
           <p>
-            At MakersDev our mission is to help small businesses secure their
+            At MakersDev our mission is to help small to medium sized businesses secure their
             growth and profitability in the ever-changing digital economy. We do
             this by establishing your online presence with ease, at an
             affordable price. We understand how hard it is to get started, so we
