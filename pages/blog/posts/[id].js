@@ -42,6 +42,7 @@ export default function Post({ postData }) {
   const handleCopyClick = (copyText) => {
     copyTextToClipboard(copyText)
       .then(() => {
+        window.alert("Link copied to clipboard");
         document.querySelector(".alert").style.display = "flex";
         setTimeout(() => {
           document.querySelector(".alert").style.display = "none";
