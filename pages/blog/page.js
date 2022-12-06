@@ -19,6 +19,24 @@ export default function Blog({ allPostsData }) {
     <Layout blog={true}>
       <Head>
         <title>MakersDev Blog</title>
+        <meta
+          name="description"
+          content="MakersDev helps small to medium sized South African businesses establish their online presence. We design and develop your website as well as setup and manage your Google Business profile."
+          key="desc"
+        />
+        <meta
+          name="keywords"
+          content="Web design in South Africa, Web development in South Africa, Google business profile management, Google business profile setup, Small business in South Africa, SME in South Africa"
+        />
+        <meta
+          property="og:description"
+          content="We establish your business online with ease. At an affordable price"
+        />
+        <meta
+          property="og:image"
+          content="https://www.partoo.co/mybusiness/wp-content/uploads/2022/04/google-my-business-ficha.jpg"
+        />
+        <meta name="author" content="MakersDev" />
       </Head>
       <section className="blogContainer">
         <h1>{"Your guide to your business's online success"}</h1>
