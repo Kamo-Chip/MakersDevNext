@@ -18,7 +18,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Web design in South Africa, Web development in South Africa, Google business profile management, Google business profile setup, Small business in South Africa, SME in South Africa"
+          content="small business web design company, website design companies for small businesses, best website design companies for small business, local business website design, affordable web design, web design agency, manage google business account, how to advertise your business for free, how to advertise on google for free, best digital marketing agency websites"
         />
         <meta
           property="og:description"

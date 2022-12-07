@@ -149,8 +149,8 @@ export default function Post({ postData }) {
           priority
           src={`/${postData.image}`}
           alt={postData.imageAlt}
-          width={100}
-          height={50}
+          width={517}
+          height={506}
           className="postHeroImg"
         />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

@@ -24,24 +24,21 @@ export default function Blog({ allPostsData }) {
   return (
     <Layout blog={true}>
       <Head>
-        <title>MakersDev Blog</title>
+        <title>The MakersDev Blog</title>
         <meta
           name="description"
-          content="MakersDev helps small to medium sized South African businesses establish their online presence. We design and develop your website as well as setup and manage your Google Business profile."
+          content="Your guide to your business's online success. We dicuss how small to medium sized South African businesses can establish their online presence."
           key="desc"
         />
         <meta
           name="keywords"
-          content="Web design in South Africa, Web development in South Africa, Google business profile management, Google business profile setup, Small business in South Africa, SME in South Africa"
+          content="small business sites, websites for small business owners, best business websites, best digital marketing agency websites"
         />
         <meta
           property="og:description"
           content="Your guide to your business's online success."
         />
-        <meta
-          property="og:image"
-          content="/ducks.jpg"
-        />
+        <meta property="og:image" content="/ducks.jpg" />
         <meta name="author" content="MakersDev" />
       </Head>
       <section className="blogContainer">
@@ -49,7 +46,13 @@ export default function Blog({ allPostsData }) {
         <ul className="blogList">
           {allPostsData.map(
             ({ id, date, title, tag, image, imageAlt, preview }) => (
-              <Link href={`/blog/posts/${id}`} key={id} className="blogItem" data-aos="fade-right" data-aos-easing="ease">
+              <Link
+                href={`/blog/posts/${id}`}
+                key={id}
+                className="blogItem"
+                data-aos="fade-right"
+                data-aos-easing="ease"
+              >
                 <li className="blogPreviewDetails">
                   <Image
                     priority
